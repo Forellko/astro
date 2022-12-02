@@ -18,6 +18,8 @@ const { title = 'Default' } = Astro.props as Props;
   </head>
   <body class="bg-slate-300">
     <Navigation />
-    <slot />
+    <div class="mt-[50px] max-w-[960px] m-auto">
+      <slot />
+    </div>
   </body>
 </html>
