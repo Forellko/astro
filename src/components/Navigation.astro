@@ -1,8 +1,22 @@
-<nav class="flex h-[100px] items-center bg-slate-400 text-xl">
+---
+const links = [
+  { url: '/', title: 'Home' },
+  { url: '/about', title: 'About' },
+  { url: '/products', title: 'Products' },
+];
+---
+
+<nav class="flex h-[100px] justify-between items-center bg-slate-400 text-xl">
   <h1 class="text-purple-800 px-[20px] font-bold">Astro</h1>
-  <ul class="flex px-[50px]">
-    <li>
-      <a href="/">Home</a>
-    </li>
+  <ul class="list-none flex px-[50px] justify-end w-[80%]">
+    {
+      links.map((el) => (
+        <li>
+          <a class="px-[1rem]" href={el.url}>
+            {el.title}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </nav>
