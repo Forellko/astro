@@ -14,6 +14,10 @@ export default function ProductCard({ product }: ProductCardProps) {
       <h2 className="text-lg">{product.title}</h2>
       <p className="font-bold">{product.price}</p>
 
+      <a href={`/product/${product.id}`}>Open product</a>
+
+      <br />
+
       <button
         className="border py-2 px-4 bg-yellw-400 text-white"
         onClick={toggleDetails}
